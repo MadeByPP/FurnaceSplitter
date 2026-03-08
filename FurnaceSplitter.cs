@@ -460,7 +460,7 @@ namespace Oxide.Plugins
 			List<Item> playerFuel = Facepunch.Pool.Get<List<Item>>();
 			try
             {
-                playerInventory.FindItemsByItemID(playerFuel, oven.fuelType.itemid);
+                playerInventory.FindItemsByItemID(playerFuel, oven.fuelType.itemid, default(ItemContainerId));
                 int fuelSlotIndex = 0;
 
                 if (neededFuel <= 0 || playerFuel.Count <= 0)
@@ -1261,4 +1261,5 @@ namespace Oxide.Plugins
 
         #endregion Exposed plugin methods
     }
+
 }
